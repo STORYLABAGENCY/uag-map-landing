@@ -11,13 +11,10 @@ const supabase = createClient(
 const LOGO_URL = "https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/online%20logo%201%20(1).png";
 
 const RAZONES = [
-  { num:"01", titulo:"Liderazgo público orientado a innovación y valor social", desc:"La UAG forma líderes capaces de diseñar políticas públicas con impacto social sostenible y generar resultados medibles para la sociedad." },
-  { num:"02", titulo:"Gobierno abierto y rendición de cuentas", desc:"Desarrolla competencias alineadas con las nuevas exigencias de la administración pública contemporánea, fortaleciendo la confianza institucional y el diálogo ciudadano." },
-  { num:"03", titulo:"Finanzas públicas + políticas públicas + innovación pública", desc:"Obtén una visión integral para diseñar, financiar y ejecutar proyectos gubernamentales con perspectiva estratégica y sostenible." },
-  { num:"04", titulo:"Proyecto aplicado a problemáticas reales", desc:"Desarrolla propuestas aplicables a contextos reales de gobierno y gestión pública, generando soluciones con impacto inmediato." },
-  { num:"05", titulo:"Coach Académico + Success Center", desc:"No estudias solo. Desde el inicio contarás con seguimiento académico, orientación personalizada y apoyo constante para alcanzar tus metas profesionales." },
-  { num:"06", titulo:"Tecnología diseñada para tu éxito", desc:"Modalidad 100% online, clases en vivo y grabadas, acceso a Canvas, Microsoft 365, LINC para asesorías personalizadas y herramientas que te permiten avanzar a tu ritmo." },
-  { num:"07", titulo:"Docentes con experiencia en el sector público", desc:"Aprende de expertos con experiencia profesional real que conocen los retos actuales de la administración pública y la gestión gubernamental." },
+  { num:"01", titulo:"Liderazgo público con impacto social", desc:"Desarrolla las competencias para diseñar políticas públicas, liderar procesos de innovación institucional y generar valor social mediante una gestión estratégica, ética y orientada a resultados." },
+  { num:"02", titulo:"Gobierno abierto, transparencia y toma de decisiones estratégicas", desc:"Fortalece tu capacidad para impulsar la rendición de cuentas, la gobernanza y la toma de decisiones basada en evidencia, respondiendo a los retos actuales del sector público." },
+  { num:"03", titulo:"Formación práctica para transformar instituciones", desc:"Integra finanzas públicas, políticas públicas e innovación en un mismo programa y desarrolla un proyecto aplicado para resolver problemáticas reales del sector público con una visión estratégica y sostenible." },
+  { num:"04", titulo:"Flexibilidad con acompañamiento real", desc:"Estudia 100% online con clases en vivo y grabadas, organiza tu tiempo y avanza con el acompañamiento de un Coach Académico. Además, tendrás acceso a Canvas, Microsoft 365 y LINC para aprender, colaborar y recibir asesorías personalizadas desde cualquier lugar y a tu propio ritmo." },
 ];
 
 const ICON_IA = () => (
@@ -67,8 +64,6 @@ const HABILIDADES = [
 const CAMPO = [
   "Dirección estratégica pública","Gobernanza y negociación",
   "Gestión de recursos públicos","Comunicación estratégica pública",
-  "Diseño de políticas públicas","Innovación institucional",
-  "Finanzas públicas","Consultoría gubernamental",
 ];
 
 const MODALIDAD = [
@@ -369,9 +364,9 @@ export default function IAPage() {
           {/* Métricas de social proof — MEJORA 5 */}
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1rem" }}>
             {[
-              { num:"9/10", label:"egresados consigue empleo en menos de 1 año", color:"#7a2531" },
-              { num:"90%", label:"de estudiantes obtiene beca o apoyo financiero", color:"#f59700" },
-              { num:"100%", label:"online — sin horarios rígidos ni clases obligatorias", color:"#f59700" },
+              { num:"100%", label:"Online: Estudia desde cualquier lugar con clases en vivo y grabadas", color:"#7a2531" },
+              { num:"6", label:"Cuatrimestres: Concluye tu maestría en 2 años", color:"#f59700" },
+              { num:"4", label:"Rutas de Especialización: Dirección estratégica pública, Gobernanza, Gestión de recursos y Comunicación estratégica", color:"#7a2531" },
             ].map((m,i)=>(
               <div key={i} style={{ padding:"1.2rem", background:"#f9f9f9", borderRadius:"10px", border:`2px solid ${m.color}22` }}>
                 <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.8rem", fontWeight:900, color:m.color, lineHeight:1, marginBottom:"0.3rem" }}>{m.num}</p>
@@ -452,7 +447,7 @@ export default function IAPage() {
       {/* ── CAMPO LABORAL ── */}
       <section style={{ padding:"4rem 2rem", background:"#fff" }}>
         <div style={{ maxWidth:"1100px", margin:"0 auto" }}>
-          <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.4rem,3vw,2rem)", fontWeight:800, color:"#333", marginBottom:"0.5rem" }}>¿Dónde podrás trabajar?</h2>
+          <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.4rem,3vw,2rem)", fontWeight:800, color:"#333", marginBottom:"0.5rem" }}>¿Dónde podrás desarrollarte?</h2>
           <div style={{ width:"60px", height:"3px", background:"#f59700", marginBottom:"2.5rem" }} />
           <div className="campo-grid" style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:"0.8rem" }}>
             {CAMPO.map((c,i)=>(
@@ -510,43 +505,18 @@ export default function IAPage() {
           <div style={{ display:"flex", flexDirection:"column", gap:"0.6rem", marginBottom:"2rem" }}>
             {[
               {
-                titulo:"Materias enriquecidas con contenido ASU",
-                contenido: (
-                  <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"2rem" }} className="asu-chat-grid">
-                    <div>
-                      <p style={{ fontSize:"0.92rem", color:"#555", lineHeight:1.8, marginBottom:"1rem" }}>
-                        Tienes la oportunidad de acelerar tus estudios de maestría durante tu licenciatura, a través de revalidación de 2 materias con <strong>Thunderbird School of Global Management</strong>.
-                      </p>
-                      <p style={{ fontSize:"0.92rem", color:"#555", lineHeight:1.8 }}>
-                        Educación universitaria de calidad sin fronteras. Plataforma digital, docentes expertos y titulación oficial UAG para impulsar tu carrera desde donde estés.
-                      </p>
-                    </div>
-                    <div style={{ background:"#f9f9f9", borderRadius:"12px", padding:"1.5rem", border:"1px solid #eee" }}>
-                      <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.74rem", fontWeight:700, color:"#f59700", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:"0.8rem" }}>BENEFICIO EXCLUSIVO</p>
-                      <div style={{ display:"flex", alignItems:"center", gap:"1rem", marginBottom:"0.8rem" }}>
-                        <span style={{ fontFamily:"'Outfit',sans-serif", fontSize:"3rem", fontWeight:900, color:"#7a2531", lineHeight:1 }}>2</span>
-                        <span style={{ fontSize:"0.9rem", color:"#555", lineHeight:1.4 }}>materias revalidables para tu maestría desde la licenciatura</span>
-                      </div>
-                      <p style={{ fontSize:"0.82rem", color:"#888", lineHeight:1.6, borderTop:"1px solid #eee", paddingTop:"0.8rem" }}>
-                        A través de <strong style={{ color:"#7a2531" }}>Thunderbird School of Global Management</strong>, una de las escuelas de negocios más reconocidas del mundo.
-                      </p>
-                    </div>
-                  </div>
-                )
-              },
-              {
                 titulo:"Certifica tu inglés con Arizona State University — sin costo adicional",
                 contenido: (
                   <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"3rem", alignItems:"center" }} className="asu-chat-grid">
                     <div>
-                      <p style={{ fontSize:"0.9rem", color:"#555", lineHeight:1.8, marginBottom:"1.5rem" }}>
+                      <p style={{ fontSize:"0.95rem", color:"#555", lineHeight:1.8, marginBottom:"1.5rem" }}>
                         Tu programa incluye 14 niveles de inglés con certificación de Arizona State University, sin costo adicional. <strong>Maya</strong> es la inteligencia artificial que guía tu práctica y conversación disponible las 24 horas.
                       </p>
                       <div style={{ display:"flex", flexDirection:"column", gap:"0.7rem" }}>
                         {["14 niveles de inglés certificados por ASU","Inteligencia Artificial MAYA disponible 24/7","Certificación internacional sin costo adicional","Práctica de conversación guiada por IA"].map((t,i)=>(
                           <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.7rem" }}>
                             <span style={{ color:"#f59700", fontWeight:700, fontSize:"1rem" }}>✓</span>
-                            <span style={{ fontSize:"0.88rem", color:"#555" }}>{t}</span>
+                            <span style={{ fontSize:"0.93rem", color:"#555" }}>{t}</span>
                           </div>
                         ))}
                       </div>
@@ -558,22 +528,10 @@ export default function IAPage() {
                           <p style={{ fontFamily:"'Outfit',sans-serif", fontWeight:700, fontSize:"0.9rem", color:"#333" }}>Maya IA</p>
                           <p style={{ fontSize:"0.72rem", color:"#888" }}>Asistente de inglés UAG · ASU · Disponible 24/7</p>
                         </div>
-                        <div style={{ position:"relative", marginLeft:"auto", cursor:"pointer" }}
-                          onMouseEnter={e=>{ audioRef.current?.play(); }}
-                          onMouseLeave={e=>{ const a=audioRef.current; if(a){a.pause();a.currentTime=0;} }}>
-                          <div style={{ width:"40px", height:"40px", borderRadius:"50%", background:"#7a2531", border:"2px solid #f59700", display:"flex", alignItems:"center", justifyContent:"center" }}>
-                            <div style={{ display:"flex", gap:"2px", alignItems:"center", height:"18px" }}>
-                              {[10,16,10,18,12].map((_,i)=>(
-                                <div key={i} style={{ width:"3px", borderRadius:"2px", background:"#f59700", height:`${[10,16,10,18,12][i]}px`, animation:`mayaBar${i%5} ${0.55+(i*0.07)}s ease-in-out infinite` }} />
-                              ))}
-                            </div>
-                          </div>
-                          <audio ref={audioRef} preload="auto"><source src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/UAG_1.mp3" type="audio/mpeg" /></audio>
-                        </div>
                       </div>
                       {[["Maya","¡Hola! Hoy practicaremos listening. ¿Listo?",false],["Tú","Yes, I'm ready!",true],["Maya","Great! Describe your ideal workplace in 3 sentences.",false]].map(([who,msg,isMe],i)=>(
                         <div key={i} style={{ display:"flex", justifyContent:isMe?"flex-end":"flex-start", marginBottom:"0.65rem" }}>
-                          <div style={{ maxWidth:"82%", padding:"0.55rem 0.85rem", borderRadius:isMe?"12px 12px 4px 12px":"12px 12px 12px 4px", background:isMe?"#7a2531":"#f0f0f0", color:isMe?"#fff":"#333", fontSize:"0.8rem", lineHeight:1.4 }}>{msg}</div>
+                          <div style={{ maxWidth:"82%", padding:"0.55rem 0.85rem", borderRadius:isMe?"12px 12px 4px 12px":"12px 12px 12px 4px", background:isMe?"#7a2531":"#f0f0f0", color:isMe?"#fff":"#333", fontSize:"0.87rem", lineHeight:1.4 }}>{msg}</div>
                         </div>
                       ))}
                     </div>
@@ -666,7 +624,7 @@ export default function IAPage() {
           </div>
           <div style={{ width:"50px", height:"3px", background:"#f59700", margin:"0 auto 2.5rem" }} />
           <div className="stats-ia-grid" style={{ display:"grid", gridTemplateColumns:"repeat(6,1fr)", gap:"1rem" }}>
-            {[["90","años de prestigio"],["44","programas online"],["1,777","alumnos activos"],["567","egresados"],["+200","convenios empresariales"],["5★","QS Stars"]].map(([n,l],i)=>(
+            {[["90","años de prestigio"],["42","programas online"],["1,777","alumnos activos"],["567","egresados"],["+200","convenios empresariales"],["5★","QS Stars"]].map(([n,l],i)=>(
               <div key={i} style={{ textAlign:"center", padding:"1.5rem 0.8rem", background:"#fff", borderRadius:"8px", border:"1px solid #eee", boxShadow:"0 2px 8px rgba(0,0,0,0.05)", transition:"transform 0.2s, box-shadow 0.2s" }}
                 onMouseEnter={e=>{ e.currentTarget.style.transform="translateY(-3px)"; e.currentTarget.style.boxShadow="0 6px 20px rgba(122,37,49,0.12)"; e.currentTarget.style.borderColor="#f59700"; }}
                 onMouseLeave={e=>{ e.currentTarget.style.transform="none"; e.currentTarget.style.boxShadow="0 2px 8px rgba(0,0,0,0.05)"; e.currentTarget.style.borderColor="#eee"; }}>
@@ -903,7 +861,7 @@ export default function IAPage() {
             ¿Listo para transformar instituciones y generar impacto social?
           </h2>
           <p style={{ fontSize:"0.95rem", color:"#777", marginBottom:"2.5rem", lineHeight:1.7 }}>
-            Inicio 7 de septiembre de 2026 · Beca + Bono disponibles · Sin examen de admisión
+            Inicio 7 de septiembre de 2026 · Beca + Bono disponibles. 
           </p>
           <a href="#formulario">
             <button className="btn-orange" style={{ padding:"1rem 3rem", fontSize:"1rem", letterSpacing:"0.06em" }}>
