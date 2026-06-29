@@ -321,7 +321,7 @@ export default function IAPage() {
         {/* IZQUIERDA — imagen, oculta en móvil */}
         <div className="hero-img-col" style={{ position:"relative", overflow:"hidden", minHeight:"480px" }}>
           <img
-            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/ADM.png"
+            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/OB.png"
             alt="Maestría en Administración Pública UAG"
             style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 30%", display:"block" }}
           />
